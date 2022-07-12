@@ -35,6 +35,7 @@ ustawianie nowego kompa
     
 # na kmpie klienta 
   # sklonuj repo 
+  git clone URL
   
    
    
