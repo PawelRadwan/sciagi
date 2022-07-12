@@ -9,7 +9,7 @@
   Type=simple
   User=parad
   PermissionsStartOnly=true
-  ExecStart=/usr/bin/python3 /home/parad/Hera/web_app.py
+  ExecStart=/usr/bin/python3 /home/heravisu/hera2_BFF/web_app.py
   Restart=always
   RestartSec=1
   TimeoutSec=600
