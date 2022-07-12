@@ -16,5 +16,5 @@
   
   
  # uruchom 
-  sudo systemctl start myFlaskApp
+  sudo systemctl start hera_web
  
