@@ -16,17 +16,17 @@ ustawianie nowego kompa
   eval "$(ssh-agent -s)"
   ssh-add ~/.ssh/id_ed25519
 
-skopiuj zawartość z .ssh/id_ed25519.pub do githuba 
-sprawdz czy dziła 
-ssh -T git@github.com
+  skopiuj zawartość z .ssh/id_ed25519.pub do githuba 
+  sprawdz czy dziła 
+  ssh -T git@github.com
 
-sklonuj repo i pracuj na nim 
+#nowy projekt
+  sklonuj repo i pracuj na nim 
+  git remote add nazwa git@github.com:PawelRadwan/nazwa.git
+  git push nazwa master
 
-git remote add nazwa git@github.com:PawelRadwan/nazwa.git
-
-git push nazwa master
-
-
+#istniejacy projekt 
+  
 
 
 
