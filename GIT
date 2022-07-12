@@ -1,0 +1,33 @@
+ustawianie nowego kompa 
+#instalacja GIT 
+  sudo apt install git 
+
+#konfiguracja gita
+  git config --global user.name "PawelRadwan"
+  git config --global user.email "rft@rftpolska.pl"
+  git config --global core.editor "code -w"
+
+#przy problmach z email 
+  git config --replace-all user.email
+
+#generowanie kluczy 
+ ssh-keygen -t ed25519 -C "rft@rftpolska.pl"
+
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_ed25519
+
+skopiuj zawartość z .ssh/id_ed25519.pub do githuba 
+sprawdz czy dziła 
+ssh -T git@github.com
+
+sklonuj repo i pracuj na nim 
+
+git remote add nazwa git@github.com:PawelRadwan/nazwa.git
+
+git push nazwa master
+
+
+
+
+
+
