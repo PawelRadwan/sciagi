@@ -37,6 +37,12 @@ ustawianie nowego kompa
   # sklonuj repo 
   git clone URL
   
+  #pobierz zmiany 
+  git pull
+  
+  #wrzuc swoje zminy
+  
+  
    
    
    
