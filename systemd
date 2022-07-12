@@ -1,0 +1,20 @@
+#zrób plik :
+  /lib/systemd/system/hera_web.service
+# zawartość 
+  [Unit]
+  Description=Hera web
+  [Install]
+  WantedBy=multi-user.target
+  [Service]
+  Type=simple
+  User=parad
+  PermissionsStartOnly=true
+  ExecStart=/usr/bin/python3 /home/parad/Hera/web_app.py
+  Restart=always
+  RestartSec=1
+  TimeoutSec=600
+  
+  
+ # uruchom 
+  sudo systemctl start myFlaskApp
+ 
