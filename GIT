@@ -40,7 +40,10 @@ ustawianie nowego kompa
   #pobierz zmiany 
   git pull
   
-  #wrzuc swoje zminy
+  #wrzuc swoje zmainy
+  git add *
+  git commit -m 'koment'
+  git push
   
   
    
