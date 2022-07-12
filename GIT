@@ -32,6 +32,10 @@ ustawianie nowego kompa
     git add *
     git commit -m 'pierwszy'
     git push nazwa master
+    
+# na kmpie klienta 
+  # sklonuj repo 
+  
    
    
    
