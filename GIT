@@ -26,9 +26,19 @@ ustawianie nowego kompa
   git push nazwa master
 
 #istniejacy projekt 
-  git init
-  git remote add nazwa git@github.com:PawelRadwan/nazwa.git
-  git add *
+  #za pierwszym razem
+    git init
+    git remote add nazwa git@github.com:PawelRadwan/nazwa.git
+    git add *
+    git commit -m 'pierwszy'
+    git push nazwa master
+   
+   
+   
+   
+   
+    
+    
   
 
 
