@@ -1,0 +1,10 @@
+#datetime 
+  from datetime import datetime
+  #tworzenie obiektu daty
+  #timestamp 
+  datetime.timestamp(obiekt_datetime)
+  
+#influxdb
+  from influxdb import InfluxDBClient
+  db_client = InfluxDBClient(influx_host,influx_port,influx_user,influx_password,influx_temp_db_name)
+  list(db_client.query('SELECT "bieg" FROM "' + jw +'" WHERE time >= ' + start_timestamp + ' AND time <= ' + stop_timestamp).get_points())
