@@ -4,6 +4,21 @@
   #timestamp 
   datetime.timestamp(obiekt_datetime)
   
+#rabbit mq
+  #Install
+    sudo apt-get install rabbitmq-server
+    sudo systemctl enable rabbitmq-server
+    sudo systemctl start rabbitmq-server
+    sudo rabbitmq-plugins enable rabbitmq_management
+  
+  #Create a new administrator account
+    rabbitmqctl add_user newadmin s0m3p4ssw0rd
+    rabbitmqctl set_user_tags newadmin administrator
+    rabbitmqctl set_permissions -p / newadmin ".*" ".*" ".*"
+  
+  #web interface
+    http://ip:15672/
+  
 #influxdb
   from influxdb import InfluxDBClient
   db_client = InfluxDBClient(influx_host,influx_port,influx_user,influx_password,influx_temp_db_name)
