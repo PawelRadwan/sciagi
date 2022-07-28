@@ -18,6 +18,8 @@
   
   #web interface
     http://ip:15672/
+  # python3 -m pip install pika --upgrade
+  
   
 #influxdb
   from influxdb import InfluxDBClient
