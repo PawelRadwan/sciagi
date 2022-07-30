@@ -4,7 +4,7 @@
   #timestamp 
   datetime.timestamp(obiekt_datetime)
   # tworzenie datetime ze stringa
-  date_time_obj = datetime. strptime(date_time_str, '%d/%m/%y %H:%M:%S')
+  date_time_obj = datetime. strptime(date_time_str, '%d/%m/%Y %H:%M:%S')
   
 #rabbit mq
   #Install
