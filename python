@@ -28,6 +28,27 @@
   db_client = InfluxDBClient(influx_host,influx_port,influx_user,influx_password,influx_temp_db_name)
   list(db_client.query('SELECT "bieg" FROM "' + jw +'" WHERE time >= ' + start_timestamp + ' AND time <= ' + stop_timestamp).get_points())
   
+  data = [
+            {
+                
+                "measurement": for_db_name,
+                "tags": {
+                    "location": 'uzupelnic',
+                },
+                "time": czas,
+                "fields": {
+                    "temp_tloczenia": TT,
+                    "temp_ssania": TS,
+                    "bieg": bieg,
+                    "tryb":mode,
+                    "alarm_code":alarm_c,
+                    "shutdown_reason":shutdown_reason
+                }
+            }
+            ]
+            #print (data)   
+            save = db_client.write_points(data)
+  
  #modbus 
     from pyModbusTCP.client import ModbusClient
     G = ModbusClient(host=ip, port=502, unit_id=G_uid, auto_open=True, auto_close= True)
