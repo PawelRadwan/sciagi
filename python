@@ -39,7 +39,18 @@
     .
   channel.basic_consume(queue='wago', on_message_callback=callback, auto_ack=True)
   
+  # consumer - sparawdz czy jest coś w kolejce jezlei tk to regauje 
+  connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+  channel = connection.channel()
+  channel.queue_declare(queue=que_name)
   
+  method, properties, body = next(channel.consume(que_name, auto_ack=True, inactivity_timeout=1))
+  if method is None:
+    ....
+  else :
+    odebrane = json.loads(body)
+    command_to_vrf(odebrane)
+ 
 #influxdb
   from influxdb import InfluxDBClient
   db_client = InfluxDBClient(influx_host,influx_port,influx_user,influx_password,influx_temp_db_name)
