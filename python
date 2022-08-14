@@ -22,6 +22,23 @@
     http://ip:15672/
   # python3 -m pip install pika --upgrade
   
+  #sender 
+  import pika
+  connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+  channel = connection.channel()
+  channel.queue_declare(queue='wago')
+  channel.basic_publish(exchange='', routing_key='wago', body=json.dumps(message))
+  
+  #consumer - czeka na wiadomość w kolejce i reaguje funkcją callback 
+  import pika
+  connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+  channel = connection.channel()
+  channel.queue_declare(queue='wago')
+  def callback(ch, method, properties, body):
+    .
+    .
+  channel.basic_consume(queue='wago', on_message_callback=callback, auto_ack=True)
+  
   
 #influxdb
   from influxdb import InfluxDBClient
