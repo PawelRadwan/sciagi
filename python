@@ -12,6 +12,9 @@
     sudo systemctl enable rabbitmq-server
     sudo systemctl start rabbitmq-server
     sudo rabbitmq-plugins enable rabbitmq_management
+    
+  # zmiana hasła dla admina
+    sudo rabbitmqctl change_password admin <NEWPASSWORD>
   
   #Create a new administrator account
     rabbitmqctl add_user newadmin s0m3p4ssw0rd
